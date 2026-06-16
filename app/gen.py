@@ -2,7 +2,8 @@
 from params_log import *
 import random
 
-file_log = f"date_{datetime.now().strftime('%H-%M-%S-%F')}.txt"
+file_log = f"date_{datetime.now().strftime('%Y.%m.%d.%H.%M.%S')}.txt"
+
 
 N = input("Введите значение N: ")
 
