@@ -10,10 +10,7 @@ file_log = f"date_{datetime.now().strftime('%Y.%m.%d.%H.%M.%S')}.txt"
 parser.add_argument('-n', '--number', type=int, default=30,  help='Количество строк для генерации (по умолчанию: 30)')
 args = parser.parse_args()
 n = args.number
-# N = input("Введите значение N: ")
-#
-# if N == "" or N == "0":
-#     N = 30  # Если ввод пуст или равен "0", присваиваем значение 30
+
 
 with open(file_log, 'w', encoding='utf-8') as file:
     for i in range(n):
