@@ -2,10 +2,12 @@
 from params_log import *
 import random
 
-
 file_log = f"date_{datetime.now().strftime('%H-%M-%S-%F')}.txt"
-N = int(input("Введите количество строк  "))  # заданное количество записей
 
+N = input("Введите значение N: ")  # Запрос ввода через input()
+
+if N == "" or N == "0":
+    N = 30  # Если ввод пуст или равен "0", присваиваем значение 30
 
 with open(file_log, 'w', encoding='utf-8') as file:
     for i in range(N):
