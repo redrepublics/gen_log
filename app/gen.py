@@ -4,7 +4,7 @@ import random
 
 file_log = f"date_{datetime.now().strftime('%H-%M-%S-%F')}.txt"
 
-N = input("Введите значение N: ")  # Запрос ввода через input()
+N = input("Введите значение N: ")
 
 if N == "" or N == "0":
     N = 30  # Если ввод пуст или равен "0", присваиваем значение 30
