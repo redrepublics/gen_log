@@ -112,12 +112,12 @@ with open(file_log, 'w', encoding='utf-8') as file:
     for i in range(n):
         current_datetime = timestamps_list[i]
 
-        num = round(random.uniform(0.1, 5.0), 2)
-        result_status = random.choices(['Error 403', 'Ок', 'memory overflow'], weights=[0.2, 0.7, 0.1], k=1)[0]
-        api_result = random.choices(['GET', 'POST', 'PUT'], weights=[0.2, 0.7, 0.1], k=1)[0]
+        num = round(random.uniform(1, 150))
+        result_status = random.choices(['Error', 'Ок'], weights=[0.2, 0.8], k=1)[0]
+        api_result = random.choices(['getResultOn', 'parseSumm', 'requestResulDroop'], weights=[0.2, 0.7, 0.1], k=1)[0]
         uid = uuid.uuid4()
 
-        error_log_text = f"time: {current_datetime}, {api_result}/api/users/urn:uuid:{uid} HTTP/1.1, время отклика {num}ms, Server status {result_status}"
+        error_log_text = f"{current_datetime}, {api_result}, {num}, {result_status}"
         file.write(f"{error_log_text}\n")
 
 # Статистика
