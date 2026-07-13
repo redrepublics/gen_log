@@ -107,7 +107,7 @@ if len(timestamps_list) < n:
         new_ts = datetime.combine(yesterday_date, datetime.min.time()) + timedelta(seconds=random_seconds)
         timestamps_list.append(new_ts.strftime("%Y-%m-%d %H:%M:%S") + f".{new_ts.microsecond // 1000:03d}")
 
-# Запись в файл
+# Запись в файл.
 with open(file_log, 'w', encoding='utf-8') as file:
     for i in range(n):
         current_datetime = timestamps_list[i]
